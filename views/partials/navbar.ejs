@@ -1,0 +1,111 @@
+<!-- views/partials/navbar.ejs-->
+<nav class="navbar navbar-expand-lg navbar-dark"> 
+    <a class="navbar-brand" href="">Box Supply Method</a>  
+    <p class="motto" style="margin-top: 50px; margin-left: 50px;">BoxSupplyMethod© Copyright 2019 Top Quality Box-shippers.</p>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">    
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Sales</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Chat</a>
+        </li>
+    </ul>
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link active" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="about">About</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/sitemap">Sitemap</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/contact">Contact</a>
+        </li>
+    <li class="nav-item">
+        <a id="admin-portal-link" class="nav-link disabled" href="/adminportal" tabindex="-1" aria-disabled="true">Admin</a>
+    </li>
+</ul>
+<form id="form-search" class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+<ul class="nav navbar-nav">
+    <div class="nav-links">
+    <li class="active">
+        <a href="/">Home</a>
+    </li>
+    <li>
+        <a href="/about">About</a>
+    </li>
+    <li>
+        <a href="/sitemap">Sitemap</a>
+    </li>
+    <li>
+        <a href="/contact">Contact</a>
+        <a id="admin-portal-link"href="/adminportal"> Admin</a>
+    </li>
+    </div>
+    <% if (user) {%>
+        <h1>WELCOME BACK <%= user.username %></h1>
+        <a href="/log-out">LOG OUT</a>
+    <% } else { %>
+        <div class="login-auth-display">
+            <h1 class="auth-login-header">please log in...</h1>
+            <!-- Trigger/Open The Modal -->
+            <a href="/sign-up"type="button" id="signup-butoon" class="btn btn-outline-success btn-lg">Sign-up</a>
+        <button type="button" id="login-butoon" class="btn btn-outline-success btn-lg">Login</button>
+        <br>
+        <div class="cart-btn-main">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#cart"><i class="fas fa-shopping-cart"></i>Cart <span class="total-count"></span></button>
+            <button class="clear-cart btn btn-danger">Clear Cart</button>
+        </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close"style="color:green">&times;</span>
+        <div class="login-form">
+            <h1>Login Form</h1>
+        <form action="/log-in" method="POST">
+        <fieldset>
+            <legend>Account</legend>
+                <div class="login-wrapper">
+                <div class="left">
+                    <label class="lead labelfield" for="username" >Username</label>
+                    <input name="username" placeholder="Username" type="text"required>
+                </div>
+                <div class="right">
+                    <label class="lead labelfield" for="password">Password</label>
+                    <input name="password" placeholder="password" type="password"required>
+                </div>
+                </div>
+                    <input type="submit">
+        </fieldset>
+        </form>
+    </div>
+        <h2><p style="margin-left: 40px;font-size:20px;color: lime">Login to Purchase Products from our Huge Database </h2>
+    </div>
+</div>
+</div>
+<%}%>
+</ul>
+</nav>

@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Express HTML</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css" integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og= sha384-gP4DhqyoT9b1vaikoHi9XQ8If7UNLO73JFOOlQV1RATrA7D0O7TjJZifac6NwPps sha512-AKwIib1E+xDeXe0tCgbc9uSvPwVYl6Awj7xl0FoaPFostZHOuDQ1abnDNCYtxL/HWEnVOMrFyf91TDgLPi9pNg==" crossorigin="anonymous">
+  <!-- Bootswatch Darkly Theme -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css">
+  <!-- Compressed JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/js/foundation.min.js" integrity="sha256-/PFxCnsMh+nTuM0k3VJCRch1gwnCfKjaP8rJNq5SoBg= sha384-9ksAFjQjZnpqt6VtpjMjlp2S0qrGbcwF/rvrLUg2vciMhwc1UJJeAAOLuJ96w+Nj sha512-UMSn6RHqqJeJcIfV1eS2tPKCjzaHkU/KqgAnQ7Nzn0mLicFxaVhm9vq7zG5+0LALt15j1ljlg8Fp9PT1VGNmDw==" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../../public/css/sign-up-form.css"
+</head>
+<body>
+  <div style="margin:100px;">
+    <div class="logo-signup" style="text-align: center">
+      <img src="../../public/logo.png">
+      <p class="motto-signup" style="margin-left: 20px;margin-top: -50px;">BoxSupplyMethod© Copyright 2019 Top Quality Box-shippers.</p>
+    </div>
+    
+    <nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">BoxSupplyMethod.</a>
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/sitemap">Sitemap</a>
+      </li>
+      <li>
+          <a href="/contact">contact</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+    <div class="jumbotron"  style="padding:40px;margin: 0px 200px 200px 200px;">
+      <h1>Sign up!</h1>
+      <p>This is where you sign up to make an account, enter your details below.</p>
+        <form id="sign-up-form-sub" action="" method="POST">
+          <label for="username">Username</label>
+          <input name="username" placeholder="username" type="text">
+          <label for="password">Password</label>
+          <input name="password" placeholder="password" type="password">
+          <button class="btn btn-primary btn-lg" role="button">Submit</button>
+        </form>
+        <h5>check for corporate verification</h5>
+        <form>
+          <fieldset>
+            <label>Coporation Role</label>
+            <br>
+            <input type="radio" name="member-check" id="memcheck" value="member-radio">
+            <label>Member</label>
+            <br>
+            <input type="radio" name="admin-check" id="admincheck" value="admin-radio">
+            <label>admin</label>
+            <br>
+            <input type="radio" name="cfo-check" id="cfocheck" value="cfo-radio">
+            <label>CFO</label>
+          </fieldset>
+          <input id="memfield" name="member-pass" placeholder="member password">
+            <input id="adminfield" name="admin-pass" placeholder="admin password">
+            <input id="cfofield" name="cfo-pass" placeholder="cfo password">
+        </form>
+            <form onsubmit="myFunction()">
+            <div id="spinner"class="spinner-grow text-success" role="status" style="display:none;">
+                <span class="sr-only">Loading...</span>
+            </div>
+            </form>
+            
+            <script>
+                $(document).ready(function(){
+                  $('input[name="member-check"]').click(function(){
+                    if ($('input[name="member-check"]').is(':checked')) {
+                    $('input[name="member-pass"]').show();
+                    }
+                    else {
+                      $('input[name="member-pass"]').hide();
+                    }
+                  })
+                  $('input[name="admin-check"]').click(function(){
+                    $('input[name="admin-pass"]').show();
+                  })
+
+                  $('input[name="cfo-check"]').click(function(){
+                    $('input[name="cfo-pass"]').show();
+                  })
+                });
+            </script>
+            
+          </div>
+          <p class="text-center text-muted">BoxSupplyMethod© Copyright 2019 The Corporation</p>
+      </body>
+        
+      </html> 
+    </div>
+  </div>
+
+
+  <!---
+    $("input[name=member-check]:radio").click(function() {
+                    if($(this).attr("member-radio")=="yes") {
+                        $('input[name="member-pass"]').show();
+                    }
+                    if($(this).attr("member-radio")=="no") {
+                        $('input[name="member-pass"]').hide();
+                    }
+                  });
+    
+    
+    <script>
+              function showSpinner() {
+                var timer = window.setTimeout(function() {
+                    $('#sign-up-form-sub').submit();
+                }, 3500);
+            
+            }
+            $(document).ready(function(){
+                $('#spinner').show(function(){
+                  showSpinner();
+                  $('#spinner').hide();
+                })  
+            });
+            $(document).ready(function(callback){
+                $('#sign-up-form-sub').on('submit', function(e) {
+                    e.preventDefault();
+                    $('#spinner').show(function(){
+                        showSpinner();
+                        $('#spinner').hide();
+                    })    
+                });
+            }); 
+            var myVar;
+            
+            function myFunction() {
+              myVar = setTimeout(showPage, 3000);
+            }
+            
+            function showPage() {
+              document.getElementById("spinner").style.display = "none";
+              document.getElementById("myDiv").style.display = "block";
+            }
+            </script>-->

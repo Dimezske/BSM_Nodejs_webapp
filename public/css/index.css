@@ -1,3 +1,4 @@
+
 .show-cart li {
     display: flex;
   }
@@ -9,3 +10,200 @@
     height: 200px;
     align-self: center;
   }
+  #products_jumbo{
+    margin: 0 50px 0 50px;
+  }
+  #admin-portal-link{
+    float: right;
+    color: darkslateblue;
+  }
+
+  #admin-portal-link:active{
+    color: aquamarine;
+  }
+
+  .navbar{
+    background-color: rgb(153, 133, 101);
+    border-color: rgb(255, 217, 0);
+  }
+  .search-box{
+    
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .cart-btn-main{
+    top:50px;
+    margin-top: 5px;
+  }
+  .name-line1{
+    margin-top:250px;
+    margin-left: -200px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 1500px;
+  }
+  .name-line2{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 1750px;
+  }
+  .name-line3{
+    margin-left: -200px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 2080px;
+  }
+  .name-line4{
+    margin-left: -100px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 1780px;
+  }
+  .motto{
+    color: rgb(80, 80, 80);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .navbar-nav{
+    display: inline-block;
+    margin: 50px 0px 0px 50px;
+  }
+  
+  .navbar-brand{
+     float: left;
+     
+  }
+  .navbar-logins{
+    float: right;
+    
+  }
+  .logo-title{
+    width: 100%;
+  }
+  .img-con{
+    display: flex;
+    justify-content: center;
+  }
+
+  #jum-top-main{
+    margin-top: 0;
+  }
+  .labelfield{
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px palegreen;
+    font-weight:bolder;
+  }
+  .headerrule{
+    color: rgb(0, 0, 0);
+    width: fit-content;
+  }
+  .login-auth-display{
+      float: right; 
+  }
+  .auth-login-header{
+    margin-top: 0px;
+    font-size: 20px;
+    color:seagreen;
+  }
+    .login-form {
+      width: 300px;
+      margin: 0 auto;
+      font-family: Tahoma, Geneva, sans-serif;
+    }
+    .login-form h1 {
+      text-align: center;
+      color: #4d4d4d;
+      font-size: 24px;
+      padding: 20px 0 20px 0;
+    }
+    .login-form input[type="password"],
+    .login-form input[type="text"] {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #dddddd;
+      margin-bottom: 15px;
+      box-sizing:border-box;
+    }
+    .login-form input[type="submit"] {
+      width: 100%;
+      padding: 15px;
+      background-color: #535b63;
+      border: 0;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .product-row1{
+      background: bisque;
+      padding: 20px;
+    }
+    .product-row2{
+      background: bisque;
+      padding: 20px;        
+    }
+    .buy-button{
+      text-align: center;
+      background:coral;
+      width: 70%;
+      height: 70%;
+    }
+    .buy-button:hover{
+      background:cornflowerblue;
+    }
+    .buttn-bg{
+      text-align: center;
+    }
+    .product-container{
+      width: 100%;
+      background: rgb(228, 209, 197);
+    }
+    .c{
+      height:25%;
+      background: #4d4d4d;
+    }
+    .b{
+      height: 75px;
+      background: #e4b47e;
+    }
+    .price-container{
+      position: relative;
+    }
+    .product-img1{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .product-name{
+      text-align: center;
+    }
+    .product-price{
+      top: 0px;
+      position: absolute;
+      text-align: center;
+      background: gray;
+      font-size: 2em;
+      z-index: 1;
+      overflow: hidden;
+      width: 100%;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      height:0;
+      transition: .5s ease;
+    }
+    
+   .price-container:hover .product-price{
+      bottom: 0;
+      height: 30%;
+    }

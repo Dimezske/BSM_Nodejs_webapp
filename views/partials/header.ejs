@@ -1,52 +1,29 @@
 <!-- views/partials/header.ejs-->
-
-<div style="margin:100px;">
-        <img src="../logo.png">
-        <nav class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
-        <a class="navbar-brand" href="/" style="color: rgb(255, 217, 0)">Box-Supply-Method</a>
-        <ul class="nav navbar-nav">
-          <li class="active">
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/sitemap">Sitemap</a>
-          </li>
-          <% if (user) {%>
-            <h1>WELCOME BACK <%= user.username %></h1>
-            <a href="/log-out">LOG OUT</a>
-          <% } else { %>
-            <h1>please log in</h1>
-            <form action="/log-in" method="POST">
-              <label class="lead labelfield" for="username" >Username</label>
-              <input name="username" placeholder="username" type="text">
-              <label class="lead labelfield" for="password">Password</label>
-              <input name="password" placeholder="password" type="password">
-              <button>Log In</button>
-            </form>
-          <%}%>
-        </ul>
-      </div>
-    </nav>
-        <div class="jumbotron"  style="padding:40px;">
-          <h1>Hello, Box Buyer!</h1>
-          <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-        </div>
+  <% include ../partials/navbar %>
+  
+  <div class ="logo-title">
+    <div class="img-con">
+      <img id="logo" src="../../public/logo.png">
+      <img id="title" src="../../public/title.png">
+    </div>
+  </div>
+  <div class="container">     
+    <div id="jum-top-main"class="jumbotron"  style="padding:40px;">
+      <h1>SEASONAL CATEGORIES!</h1>
+      <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Browse</a></p>
+  </div>
+        
         <div>
           <h2>Products</h2>
-          <hr>
+          <hr class="line-rule">
+          <div id="products_jumbo"class="jumbotron">
+            <div class="container">
+                <div class="c"><h1>ADVERTISEMENT</h1></div>
+                
+                <% include ../shop/index.ejs %>    
+              </div>
+          </div>
         </div>
+      </div>
         <!-- Nav -->
-    <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
-        <div class="row">
-            <div class="col">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
-        </div>
-    </nav>
-    
-    
-    

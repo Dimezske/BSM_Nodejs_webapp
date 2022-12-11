@@ -14,7 +14,7 @@
     "ejs": "^2.6.2",
     "emitter": "0.0.5",
     "event": "^1.0.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.16.2",
     "http": "0.0.0",
     "jquery": "^3.4.1",
